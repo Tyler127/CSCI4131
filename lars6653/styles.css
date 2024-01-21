@@ -1,0 +1,110 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.roboto300 {
+    font-weight: 300;
+}
+
+
+
+/* DEFAULTS */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    padding: 1em;
+}
+
+th {
+    text-decoration: underline;
+}
+
+
+
+/* NAVIGATION BAR */
+div.nav {
+    background-color: burlywood;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+h2.nav {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+a.nav {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 1em;
+    margin: 0;
+    margin-right: -3px;
+    text-decoration: none;
+}
+
+a.nav:hover {
+    color: white;
+    background-color: black;
+}
+
+a.nav.active {
+    background-color: brown;
+}
+
+
+
+/* ABOUT ME PAGE */
+img#me {
+    width: 100%; 
+    max-width: 100%; 
+    max-height: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+td.aboutme {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* EXTRAS */
+.margin5percentTB {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.margin5percentLR {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+
+div.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
