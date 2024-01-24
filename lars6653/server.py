@@ -12,12 +12,15 @@ def getFile(url):
     """
     # The following approach isn't a good approach. A better approach would be to find 
     # the index of ? and/or # and ignore everything after it, then just string-match.
-    if url.startswith("/My"):
-        return open("MySchedule.html").read()
+    if url.startswith("/my"):
+        return open("myschedule.html").read()
     # Note, you will have to add an elif case for your AboutMe.html page - it should
     # be similar to the condition in the beginning of the if statement above.
+    elif url.startswith("/ab"):
+        return open("aboutme.html").read()
+    # file not found, we provide this file!!!!
     else:
-        return open("404.html").read()  # file not found, we provide this file!!!!
+        return open("404.html").read()  
     
 
 class RequestHandler(BaseHTTPRequestHandler):
@@ -25,7 +28,6 @@ class RequestHandler(BaseHTTPRequestHandler):
         # Call the student-edited server code.
         message = getFile(self.path)
 
-        
         # Convert the return value into a byte string for network transmission
         if type(message) == str:
             message = bytes(message, "utf8")
