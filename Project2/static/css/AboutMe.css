@@ -1,0 +1,60 @@
+/* ABOUT ME */
+
+ol {
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+    overflow: auto;
+}
+
+iframe.youtube {
+    border: 0;
+    min-width: 100px;
+    min-height: 700px;
+    width: 100%;
+    height: auto;
+}
+
+td.percentwidth33 {
+    width: 33%;
+    height: 40em;
+}
+
+td.img {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: 1px black;
+    height: 40em;
+    /* background-color: blue; */
+}
+
+td.img img {
+    max-width: 100%; 
+    max-height: 100%; 
+    min-width: 20em;
+    min-height: auto;
+    height: auto; 
+}
+
+td.ig {
+    display: flex;
+    justify-content: center;
+    border: 1px black;
+    /* background-color: palevioletred; */
+}
+
+/* table.aboutme {
+    background-color: aqua;
+} */
+
+/* li.me {
+    background-color: pink;
+}
+
+li.favorites {
+    background-color: violet;
+} */
+
+
+

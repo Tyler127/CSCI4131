@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Schedule</title>
+        <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+        <link rel="stylesheet"  type="text/css" href="/css/MySchedule.css">
+    </head>
+
+    <body>
+        <div class="nav">
+            <h2 class="nav"><a class="nav active" href="/MySchedule.html">My Schedule</a></h2>
+            <h2 class="nav"><a class="nav" href="/AboutMe.html">About Me</a></h2>
+            <h2 class="nav"><a class="nav" href="/MyForm.html">Form</a></h2>
+            <h2 class="nav"><a class="nav" href="/EventLog.html">Form Responses</a></h2>
+        </div>
+
+        <div class="header centered margin-spacing-top-bottom">
+            <h1>My Schedule</h1>    
+        </div>
+
+        <div class="content">
+            <div class="left-flex-content margin-spacing-right scrollable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day:</th>
+                            <th>Event:</th>
+                            <th>Time:</th>
+                            <th>Event Location:</th>
+                            <th>Phone Number:</th>
+                            <th>URL:</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr class="roboto300" onmouseover="updateImage('rec')">
+                            <td>Monday</td>
+                            <td>PE 1015 Lecture</td>
+                            <td>9:05am - 9:55am</td>
+                            <td>University Rec Center<span class="td-img-container"><img src="/img/rec.jpg" alt="Rec"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">PE 1015 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('anderson')">
+                            <td>Monday</td>
+                            <td>CSCI 4131 Lecture</td>
+                            <td>11:15am - 12:30pm</td>
+                            <td>Anderson Hall 370<span class="td-img-container"><img src="/img/anderson.jpg" alt="Anderson"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4131 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('tate')">
+                            <td>Monday</td>
+                            <td>CSCI 4211 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>Tate Hall 105<span class="td-img-container"><img src="/img/Tate.png" alt="Tate"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4211 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('zoom')">
+                            <td>Tuesday</td>
+                            <td>CSCI 5521 Lecture</td>
+                            <td>1:00pm - 2:15pm</td>
+                            <td>Remote<span class="td-img-container"><img src="/img/zoom.jpg" alt="Zoom"></span></td>
+                            <td>None</td>
+                            <td><a href="">CSCI 5521 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('smith')">
+                            <td>Tuesday</td>
+                            <td>CSCI 4611 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>Smith Hall 100<span class="td-img-container"><img src="/img/smith.jpg" alt="Smith"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4611 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('akerman')">
+                            <td>Tuesday</td>
+                            <td>CSCI 3081W Lecture</td>
+                            <td>4:00pm - 5:15pm</td>
+                            <td>Akerman Hall 319<span class="td-img-container"><img src="/img/akerman.jpg" alt="Akerman"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 3081W Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('rec')">
+                            <td>Wednesday</td>
+                            <td>PE 1015 Lecture</td>
+                            <td>9:05am - 9:55am</td>
+                            <td>University Rec Center<span class="td-img-container"><img src="/img/rec.jpg" alt="Rec"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">PE 1015 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('anderson')">
+                            <td>Wednesday</td>
+                            <td>CSCI 4131 Lecture</td>
+                            <td>11:15am - 12:30pm</td>
+                            <td>Anderson Hall 370<span class="td-img-container"><img src="/img/anderson.jpg" alt="Anderson"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4131 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('tate')">
+                            <td>Wednesday</td>
+                            <td>CSCI 4211 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>Tate Hall 105<span class="td-img-container"><img src="/img/Tate.png" alt="Tate"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4211 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('zoom')">
+                            <td>Thursday</td>
+                            <td>CSCI 5521 Lecture</td>
+                            <td>1:00pm - 2:15pm</td>
+                            <td>Remote<span class="td-img-container"><img src="/img/zoom.jpg" alt="Zoom"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 5521 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('smith')">
+                            <td>Thursday</td>
+                            <td>CSCI 4611 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>Smith Hall 100<span class="td-img-container"><img src="/img/smith.jpg" alt="Smith"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4611 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('akerman')">
+                            <td>Thursday</td>
+                            <td>CSCI 3081W Lecture</td>
+                            <td>4:00pm - 5:15pm</td>
+                            <td>Akerman Hall 319<span class="td-img-container"><img src="/img/akerman.jpg" alt="Akerman"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 3081W Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('walter')">
+                            <td>Friday</td>
+                            <td>CSCI 3081W Lab</td>
+                            <td>2:30pm - 3:20pm</td>
+                            <td>Walter Library B28<span class="td-img-container"><img src="/img/walter.jpg" alt="Walter"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 3081W Info</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="right-flex-content margin-spacing-left">
+                <img id="myScheduleImg" src="/img/gophers-mascot.png" alt="Image">
+            </div>
+        </div>
+    </body>
+
+    <script src="/js/MySchedule.js"></script>
+</html>

@@ -1,0 +1,35 @@
+/* MY SCHEDULE */
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+td:nth-child(4) {
+    width: 100%; 
+}
+
+tr .td-img-container {
+    float: left;
+    text-align: center; 
+}
+
+tr .td-img-container img {
+    display: none;
+    float: left;
+    width: 50%;
+    height: auto;
+}
+
+tr:hover img {
+    display: inline;
+}
+
+div.right-flex-content img {
+    height: 500px;
+    width: 500px;
+}
+
