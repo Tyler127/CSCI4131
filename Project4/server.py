@@ -7,7 +7,7 @@ import datetime
 all_responses = ""
 
 last_filename = ""
-log_file = open("response.txt", "w")
+log_file = open("response.log", "w")
 def create_log_entry(message, response_code, headers):
     time = datetime.datetime.now()
     print("LOGGING")

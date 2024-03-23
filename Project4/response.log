@@ -1,0 +1,12 @@
+2024-03-22 22:51:22.083466: STATUS: 200, HEADERS: {'Content-Type': 'text/html', 'Content-Length': 12156, 'X-Content-Type-Options': 'nosniff'}, MySchedule.html
+2024-03-22 22:51:22.123432: STATUS: 200, HEADERS: {'Content-Type': 'text/css', 'Content-Length': 2535, 'X-Content-Type-Options': 'nosniff'}, styles.css
+2024-03-22 22:51:22.124622: STATUS: 200, HEADERS: {'Content-Type': 'text/css', 'Content-Length': 1469, 'X-Content-Type-Options': 'nosniff'}, MySchedule.css
+2024-03-22 22:51:22.126239: STATUS: 200, HEADERS: {'Content-Type': 'image/jpeg', 'Content-Length': 56540, 'X-Content-Type-Options': 'nosniff'}, rec.jpg
+2024-03-22 22:51:22.127749: STATUS: 200, HEADERS: {'Content-Type': 'image/jpeg', 'Content-Length': 90623, 'X-Content-Type-Options': 'nosniff'}, anderson.jpg
+2024-03-22 22:51:22.132691: STATUS: 200, HEADERS: {'Content-Type': 'image/png', 'Content-Length': 3339565, 'X-Content-Type-Options': 'nosniff'}, Tate.png
+2024-03-22 22:51:22.133666: STATUS: 200, HEADERS: {'Content-Type': 'image/jpeg', 'Content-Length': 37561, 'X-Content-Type-Options': 'nosniff'}, zoom.jpg
+2024-03-22 22:51:22.134894: STATUS: 200, HEADERS: {'Content-Type': 'image/jpeg', 'Content-Length': 45746, 'X-Content-Type-Options': 'nosniff'}, smith.jpg
+2024-03-22 22:51:22.142683: STATUS: 200, HEADERS: {'Content-Type': 'image/jpeg', 'Content-Length': 32179, 'X-Content-Type-Options': 'nosniff'}, akerman.jpg
+2024-03-22 22:51:22.144380: STATUS: 200, HEADERS: {'Content-Type': 'image/jpeg', 'Content-Length': 150800, 'X-Content-Type-Options': 'nosniff'}, walter.jpg
+2024-03-22 22:51:22.145294: STATUS: 200, HEADERS: {'Content-Type': 'image/png', 'Content-Length': 82836, 'X-Content-Type-Options': 'nosniff'}, gophers-mascot.png
+2024-03-22 22:51:22.147423: STATUS: 200, HEADERS: {'Content-Type': 'text/javascript', 'Content-Length': 7683, 'X-Content-Type-Options': 'nosniff'}, MySchedule.js
