@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Form</title>
+        <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+        <link rel="stylesheet"  type="text/css" href="/css/MyForm.css">
+    </head>
+
+    <body>
+        <div class="nav">
+            <h2 class="nav"><a class="nav" href="/MySchedule.html">My Schedule</a></h2>
+            <h2 class="nav"><a class="nav" href="/AboutMe.html">About Me</a></h2>
+            <h2 class="nav"><a class="nav active" href="/MyForm.html">Form</a></h2>
+            <h2 class="nav"><a class="nav" href="/EventLog.html">Form Responses</a></h2>
+            <h2 class="nav"><a class="nav" href="/stockQuotes.html">Stock Quotes</a></h2>
+        </div>
+
+        <div class="header centered margin-spacing-top-bottom">
+            <h1>My Form</h1>    
+        </div>
+        
+        <div class="content centered">
+            <div class="form">
+                <form method="post" action="/EventLog.html">
+                    <label for="event">Event:</label>
+                    <input type="text" id="event" name="event" placeholder="Event Name" required>
+
+                    <label for="day">Day of Week:</label>
+                    <select id="day" name="day" required>
+                        <option value="" disabled selected>Select Day</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                        <option value="Sunday">Sunday</option>
+                    </select>
+
+                    <label for="start_time">Start Time:</label>
+                    <input type="time" id="start_time" name="start_time" required>
+
+                    <label for="end_time">End Time:</label>
+                    <input type="time" id="end_time" name="end_time" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" pattern="^[1-9][0-9]{2}-[0-9]{3}-[0-9]{4}$" required>
+
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" placeholder="Event Location" required>
+
+                    <label for="extra_info">Extra Information:</label>
+                    <textarea id="extra_info" name="extra_info" placeholder="Extra Information" rows="4" required></textarea>
+
+                    <label for="url">URL:</label>
+                    <input type="url" id="url" name="url" placeholder="Event URL" required>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/MyForm.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRSX22fT2aHmFzidat8pJIrRep-bCaexs&libraries=places&callback=initMap" async defer></script>
+    </body>
+</html>

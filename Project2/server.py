@@ -1,6 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import unquote_plus
 
+all_responses = ""
 
 def get_body_params(body):
     if not body:
@@ -22,7 +23,6 @@ def get_body_params(body):
 
 def submission_to_table(item):
     """TODO: Takes a dictionary of form parameters and returns an HTML table row
-
     An example input dictionary might look like: 
     {
      'event': 'Sleep',
@@ -35,7 +35,25 @@ def submission_to_table(item):
      'url': 'https://example.com'
     }
     """
-    return ""
+    global all_responses
+
+    # If there is nothing in the dict, return all previous responses
+    if len(item) == 0:
+        return all_responses
+
+    # Add the new response to all responses
+    all_responses += "<tr>"
+    all_responses += "<td>" + item.get("event") + "</td>"
+    all_responses += "<td>" + item.get("day") + "</td>"
+    all_responses += "<td>" + item.get("start_time") + "</td>"
+    all_responses += "<td>" + item.get("end_time") + "</td>"
+    all_responses += "<td>" + item.get("phone") + "</td>"
+    all_responses += "<td>" + item.get("location") + "</td>"
+    all_responses += "<td>" + item.get("extra_info") + "</td>"
+    all_responses += "<td><a href=\"" + item.get("url") + '\">' + item.get("url") + "</a></td>"
+    all_responses += "</tr>"
+
+    return all_responses
 
 
 # NOTE: Please read the updated function carefully, as it has changed from the
@@ -53,43 +71,72 @@ def handle_req(url, body=None):
     This function should return two strings in a list or tuple. The first is the
     content to return, and the second is the content-type.
     """
-
-    # Get rid of any query string parameters
-    url, *_ = url.split("?", 1)
-    # Parse any form parameters submitted via POST
-    parameters = get_body_params(body)
-
-    if url == "/MySchedule.html":
-        return open("static/html/MySchedule.html").read(), "text/html"
-    if url == "/MyForm.html":
-        return open("static/html/MyForm.html").read(), "text/html"
-    elif url == "/AboutMe.html":
-        return open("static/html/AboutMe.html").read(), "text/html"
-    
-    elif url == "/img/gophers-mascot.png":
-        return open("static/img/gophers-mascot.png", "br").read(), "image/png"
     # NOTE: These files may be different for your server, but we include them to
     # show you examples of how yours may look. You may need to change the paths
     # to match the files you want to serve. Before you do that, make sure you
     # understand what the code is doing, specifically with the MIME types and
     # opening some files in binary mode, i.e. `open(..., "br")`.
-    elif url == "/css/styles.css":
-        return open("static/css/styles.css").read(), "text/css"
-    elif url == "/css/MySchedule.css":
-        return open("static/css/MySchedule.css").read(), "text/css"
-    elif url == "/css/AboutMe.css":
-        return open("static/css/AboutMe.css").read(), "text/css"
+
+    # Get rid of any query string parameters
+    url, *_ = url.split("?", 1)
+    filename, filetype = url.split(".", 1)
+    print(url)
+    print(filename)
+    print(filetype)
+
+    # Parse any form parameters submitted via POST
+    parameters = get_body_params(body)
+
+    # Will not attempt to load a static page for URLs in this list
+    dynamic_pages = ["/EventLog.html"]
+
+    # Finds the static resource based on the file type
+    if filetype == "html" and url not in dynamic_pages:
+        return open("static/html" + url).read(), "text/html"
     
-    elif url == "/js/MySchedule.js":
-        return open("static/js/MySchedule.js").read(), "text/javascript"
-    elif url == "/js/AboutMe.js":
-        return open("static/js/AboutMe.js").read(), "text/javascript"
+    elif filetype == "css":
+        return open("static/" + url).read(), "text/css"
     
-    elif url == "/img/Tate.png":
-        return open("static/img/Tate.png", "br").read(), "image/png"
-    elif url == "/img/zoom.jpg":
-        return open("static/img/zoom.jpg", "br").read(), "image/jpeg"
-  
+    elif filetype == "js":
+        return open("static/" + url).read(), "text/javascript"
+    
+    elif filetype == "png":
+        return open("static" + url, "br").read(), "image/png"
+    
+    elif filetype == "jpg":
+        return open("static" + url, "br").read(), "image/jpeg"
+
+
+    # if url == "/MySchedule.html":
+    #     return open("static/html/MySchedule.html").read(), "text/html"
+    # if url == "/MyForm.html":
+    #     return open("static/html/MyForm.html").read(), "text/html"
+    # elif url == "/AboutMe.html":
+    #     return open("static/html/AboutMe.html").read(), "text/html"
+    # elif url == "/css/styles.css":
+    #     return open("static/css/styles.css").read(), "text/css"
+    # elif url == "/css/MySchedule.css":
+    #     return open("static/css/MySchedule.css").read(), "text/css"
+    # elif url == "/css/AboutMe.css":
+    #     return open("static/css/AboutMe.css").read(), "text/css"
+    # elif url == "/css/MyForm.css":
+    #     return open("static/css/MyForm.css").read(), "text/css"
+    # elif url == "/js/MySchedule.js":
+    #     return open("static/js/MySchedule.js").read(), "text/javascript"
+    # elif url == "/js/AboutMe.js":
+    #     return open("static/js/AboutMe.js").read(), "text/javascript"
+    # elif url == "/img/anderson.jpg":
+    #     return open("static/img/anderson.jpg", "br").read(), "image/png"
+    # elif url == "/img/gophers-mascot.png":
+    #     return open("static/img/gophers-mascot.png", "br").read(), "image/png"
+    # elif url == "/img/rec.jpg":
+    #     return open("static/img/rec.jpg", "br").read(), "image/png"
+    # elif url == "/img/Tate.png":
+    #     return open("static/img/Tate.png", "br").read(), "image/png"
+    # elif url == "/img/walter.jpg":
+    #     return open("static/img/walter.jpg", "br").read(), "image/jpeg"
+    # elif url == "/img/zoom.jpg":
+    #     return open("static/img/zoom.jpg", "br").read(), "image/jpeg"
   
     # TODO: Add update the HTML below to match your other pages and
     # implement the `submission_to_table`.
@@ -113,29 +160,31 @@ def handle_req(url, body=None):
                 </div>
 
                 <div class="header centered margin-spacing-top-bottom">
-                    <h1> My New Events </h1>
+                    <h1>Form Responses</h1>
                 </div>
 
                 <div class="content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Event</th>
-                                <th>Day</th>
-                                <th>Start</th>
-                                <th>End</th>
-                                <th>Phone</th>
-                                <th>Location</th>
-                                <th>Extra Info</th>
-                                <th>URL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        """
-            + submission_to_table(parameters)
-            + """
-                        </tbody>
-                    </table>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Day</th>
+                                    <th>Start</th>
+                                    <th>End</th>
+                                    <th>Phone</th>
+                                    <th>Location</th>
+                                    <th>Extra Info</th>
+                                    <th>URL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            """
+                + submission_to_table(parameters)
+                + """
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </body>
             </html>""",

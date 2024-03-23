@@ -9,7 +9,6 @@ function updateImage(imageName) {
             image.setAttribute('src', '/img/anderson.jpg');
             break;
         
-        // TODO:
         case 'akerman':
             image.setAttribute('src', '/img/akerman.jpg');
             break;
@@ -18,7 +17,6 @@ function updateImage(imageName) {
             image.setAttribute('src', '/img/rec.jpg');
             break;
 
-        // TODO:
         case 'smith':
             image.setAttribute('src', '/img/smith.jpg');
             break;
@@ -39,9 +37,3 @@ function updateImage(imageName) {
     image.setAttribute('height', '500px');
     image.setAttribute('width', '500px');
 }
-
-/* ABOUT ME */
-document.addEventListener("DOMContentLoaded", function() {
-    // Your JavaScript code here
-    console.log("DOM content loaded");
-});

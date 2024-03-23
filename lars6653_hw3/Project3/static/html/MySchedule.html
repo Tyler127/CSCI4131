@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Schedule</title>
+        <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+        <link rel="stylesheet"  type="text/css" href="/css/MySchedule.css">
+    </head>
+
+    <body>
+        <div class="nav">
+            <h2 class="nav"><a class="nav active" href="/MySchedule.html">My Schedule</a></h2>
+            <h2 class="nav"><a class="nav" href="/AboutMe.html">About Me</a></h2>
+            <h2 class="nav"><a class="nav" href="/MyForm.html">Form</a></h2>
+            <h2 class="nav"><a class="nav" href="/EventLog.html">Form Responses</a></h2>
+            <h2 class="nav"><a class="nav" href="/stockQuotes.html">Stock Quotes</a></h2>
+        </div>
+
+        <div class="header centered margin-spacing-top-bottom">
+            <h1>My Schedule</h1>    
+        </div>
+
+        <div class="content">
+            <div class="left-flex-content margin-spacing-right scrollable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day:</th>
+                            <th>Event:</th>
+                            <th>Time:</th>
+                            <th>Event Location:</th>
+                            <th>Phone Number:</th>
+                            <th>URL:</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr class="roboto300" onmouseover="updateImage('rec')">
+                            <td>Monday</td>
+                            <td>PE 1015 Lecture</td>
+                            <td>9:05am - 9:55am</td>
+                            <td>123 SE Harvard St, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/rec.jpg" alt="Rec"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">PE 1015 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('anderson')">
+                            <td>Monday</td>
+                            <td>CSCI 4131 Lecture</td>
+                            <td>11:15am - 12:30pm</td>
+                            <td>257 S 19th Ave, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/anderson.jpg" alt="Anderson"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4131 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('tate')">
+                            <td>Monday</td>
+                            <td>CSCI 4211 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>116 Church St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/Tate.png" alt="Tate"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4211 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('zoom')">
+                            <td>Tuesday</td>
+                            <td>CSCI 5521 Lecture</td>
+                            <td>1:00pm - 2:15pm</td>
+                            <td>Remote<span class="td-img-container"><img src="/img/zoom.jpg" alt="Zoom"></span></td>
+                            <td>None</td>
+                            <td><a href="">CSCI 5521 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('smith')">
+                            <td>Tuesday</td>
+                            <td>CSCI 4611 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>207 Pleasant St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/smith.jpg" alt="Smith"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4611 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('akerman')">
+                            <td>Tuesday</td>
+                            <td>CSCI 3081W Lecture</td>
+                            <td>4:00pm - 5:15pm</td>
+                            <td>110 Union St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/akerman.jpg" alt="Akerman"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 3081W Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('rec')">
+                            <td>Wednesday</td>
+                            <td>PE 1015 Lecture</td>
+                            <td>9:05am - 9:55am</td>
+                            <td>123 SE Harvard St, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/rec.jpg" alt="Rec"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">PE 1015 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('anderson')">
+                            <td>Wednesday</td>
+                            <td>CSCI 4131 Lecture</td>
+                            <td>11:15am - 12:30pm</td>
+                            <td>257 S 19th Ave, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/anderson.jpg" alt="Anderson"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4131 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('tate')">
+                            <td>Wednesday</td>
+                            <td>CSCI 4211 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>116 Church St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/Tate.png" alt="Tate"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4211 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('zoom')">
+                            <td>Thursday</td>
+                            <td>CSCI 5521 Lecture</td>
+                            <td>1:00pm - 2:15pm</td>
+                            <td>Remote<span class="td-img-container"><img src="/img/zoom.jpg" alt="Zoom"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 5521 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('smith')">
+                            <td>Thursday</td>
+                            <td>CSCI 4611 Lecture</td>
+                            <td>2:30pm - 3:45pm</td>
+                            <td>207 Pleasant St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/smith.jpg" alt="Smith"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 4611 Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('akerman')">
+                            <td>Thursday</td>
+                            <td>CSCI 3081W Lecture</td>
+                            <td>4:00pm - 5:15pm</td>
+                            <td>110 Union St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/akerman.jpg" alt="Akerman"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 3081W Info</a></td>
+                        </tr>
+
+                        <tr class="roboto300" onmouseover="updateImage('walter')">
+                            <td>Friday</td>
+                            <td>CSCI 3081W Lab</td>
+                            <td>2:30pm - 3:20pm</td>
+                            <td>117 Pleasant St SE, Minneapolis, MN 55455<span class="td-img-container"><img src="/img/walter.jpg" alt="Walter"></span></td>
+                            <td>None</td>
+                            <td><a href="https://dept.aem.umn.edu/cgi-bin/courses/noauth/course-catalog?QFCHK=0&search=yes&ns=1&subject=CSCI">CSCI 3081W Info</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="right-flex-content margin-spacing-left">
+                <img id="myScheduleImg" src="/img/gophers-mascot.png" alt="Image">
+            </div>
+        </div>
+
+        <div class="map-container">
+            <div id="directionsPanel"></div>
+            <div id="map"></div>
+            <div id="map-input-form">
+                <div id="find-a-place-container">
+                    <h1>Find A Place</h1>
+                    <label for="category">Category:</label>
+                    <select id="category" onchange="toggleKeywordsField()">
+                        <option value="restaurant">Restaurant</option>
+                        <option value="hospital">Hospital</option>
+                        <option value="parking">Parking</option>
+                        <option value="supermarket">Supermarket</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+                    <label for="radius">Radius:</label>
+                    <input type="number" id="radius" value="500">
+                    <label for="keywords">Keywords:</label>
+                    <input type="text" id="keywords" disabled>
+                    <br>
+                    <button onclick="searchPlaces()">Search</button>
+                </div>
+                <hr>
+                <div id="directions-to-container">
+                    <h1>Directions Finder</h1>
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination">
+                    <br>
+                    <label>Mode of Travel:</label>
+                    <label for="driving">Driving</label>
+                    <input type="radio" id="driving" name="mode" value="DRIVING" checked>
+                    <label for="walking">Walking</label>
+                    <input type="radio" id="walking" name="mode" value="WALKING">
+                    <label for="transit">Transit</label>
+                    <input type="radio" id="transit" name="mode" value="TRANSIT">
+                    <br>
+                    <button onclick="createRoute()">Go</button>
+                    </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/MySchedule.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzT6-ldxhAWi5ZIKm20YtkVGobVCfbvmE&libraries=places&callback=initMap" async defer></script>
+    </body>
+</html>

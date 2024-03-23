@@ -4,7 +4,7 @@ function updateClock() {
     document.getElementById('hours').innerHTML = date.getHours() % 12;
     document.getElementById('minutes').innerHTML = date.getMinutes();
     document.getElementById('seconds').innerHTML = date.getSeconds();
-    document.getElementById('ampm').innerHTML = (date.getHours() % 12 > 0) ? "AM" : "PM";
+    document.getElementById('ampm').innerHTML = (date.getHours() % 12 > 0) ? "PM" : "AM";
 }
 
 window.onload = function() {

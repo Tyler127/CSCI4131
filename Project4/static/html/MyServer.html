@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>MyServer</title>
+    <style>
+        div{
+            text-align:center;
+            margin-bottom: 5%;
+        }
+        #links ul li{
+            display: inline;
+            margin-right: 30px;
+        }
+        label{
+          margin-right: 5px;
+        }
+    </style>
+  </head>
+  <body>
+  <center>
+    <h1>MyServer Page</h1></br>
+  </center>
+  <div id='links'>
+    <ul>
+        <li> <a href="Coffman.html"> Coffman Picture</a> </li>
+        <li> <a href="Coffman_N_OuttaSpace.html"> Coffman + OuttaSpace</a> </li>
+        <li> <a href="OuttaSpace.html"> OuttaSpace MP3</a> </li>
+    </ul>
+    </div>
+    <hr>
+    <div>
+      <a href="MySchedule.html"> Go to MySchedule page</a>
+      <a href="MyForm.html"> Go to MyForm page</a>
+    </div>
+    <div>
+      <h2>Search Redirect Form</h2>
+      <form action="/redirect" method="GET">
+          <label for="search_term">Search Term:</label>
+          <input type="text" id="search_term" name="search_term" required>
+          <label for="search_source">Search Source</label>
+          <select id="search_source" name="search_source" required>
+              <option value="google">Google</option>
+              <option value="youtube">YouTube</option>
+          </select>
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <h2>Calculator</h2>
+      <form action="/calculator" method="GET">
+          <input type="number" id="num1" name="num1" required>
+          <select id="operator" name="operator" required>
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+          </select>
+          <input type="number" id="num2" name="num2" required>
+          <button type="submit">Calculate</button>
+      </form>
+    </div>
+  </body>
+</html>

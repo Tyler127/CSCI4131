@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map with Marker and InfoWindow</title>
+	<meta name="viewport" content="initial-scale=1.0 user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+		height: 50%;
+		margin-left: 10%;
+        margin-right: 10%;
+		margin-top: 10%;
+		align="middle";
+      }
+	 </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+		var myLatLng = {lat: 44.9739602, lng: -93.2330895};
+        map = new google.maps.Map(document.getElementById('map'), {
+		  zoom :16, 
+          center: myLatLng
+          });
+		
+		var contentString = '<div id="contentf">' + '<div id="bodyContent">' + "Here: " +
+		                    '<p>Admunson Hall</p>' + '</div>' + '</div>';
+		var infowindow = new google.maps.InfoWindow({content:contentString});
+		var aLL = {lat: 44.9739602, lng: -93.2330897};
+		var marker = new google.maps.Marker({ map: map, 
+											  position:aLL,
+											  title: "Hello World"});
+		
+		marker.addListener('click', function(){infowindow.open(map,marker);});
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=INSERT_MAP_KEY_HERE&libraries=places&callback=initMap" async defer></script>
+  </body>
+</html>

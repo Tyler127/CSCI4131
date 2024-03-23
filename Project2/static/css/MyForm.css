@@ -1,0 +1,39 @@
+.form {
+    max-width: 100%;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="time"],
+.form input[type="tel"],
+.form textarea,
+.form select,
+.form input[type="url"] {
+    /* width: calc(100% - 20px); */
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #45a049;
+}

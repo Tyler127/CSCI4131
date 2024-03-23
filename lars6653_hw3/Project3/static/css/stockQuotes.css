@@ -1,0 +1,28 @@
+#stocks-input-form {
+    padding-right: 5em;
+}
+
+label {
+    display: block; 
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+#stocks-input-form input {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#stocks-input-form button {
+    width: 100%;
+    padding: 1em;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#stocks-api-reponse {
+    height: 15em;
+}

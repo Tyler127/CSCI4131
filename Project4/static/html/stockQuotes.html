@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Stock Quotes</title>
+        <link rel="stylesheet"  type="text/css" href="/css/styles.css">
+        <link rel="stylesheet"  type="text/css" href="/css/stockQuotes.css">
+    </head>
+
+    <body>
+        <div class="nav">
+            <h2 class="nav"><a class="nav" href="/MySchedule.html">My Schedule</a></h2>
+            <h2 class="nav"><a class="nav" href="/AboutMe.html">About Me</a></h2>
+            <h2 class="nav"><a class="nav" href="/MyForm.html">Form</a></h2>
+            <h2 class="nav"><a class="nav" href="/EventLog.html">Form Responses</a></h2>
+            <h2 class="nav"><a class="nav active" href="/stockQuotes.html">Stock Quotes</a></h2>
+        </div>
+
+        <div class="header centered margin-spacing-top-bottom">
+            <h1>Stock Quotes</h1>    
+        </div>
+
+        <div class="content">
+            <div id="stocks-input-form">
+                <label for="stock-symbol">Enter Stock Symbol:</label>
+                <input type="text" id="stock-symbol" placeholder="NVDA">
+                <button onclick="getStockData()">Get Stock Data</button>
+            </div>
+            <div>
+                <label for="stocks-api-reponse">API Response:</label>
+                <textarea id="stocks-api-reponse" rows="4" cols="50"></textarea>
+            </div>
+        </div>
+
+        <script src="/js/stocks.js"></script>
+        <script src="/js/stockQuotes.js"></script>
+    </body>
+</html>

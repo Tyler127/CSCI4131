@@ -1,0 +1,103 @@
+/* MY SCHEDULE */
+
+tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+td:nth-child(4) {
+    width: 100%; 
+}
+
+tr .td-img-container {
+    float: left;
+    text-align: center; 
+}
+
+tr .td-img-container img {
+    display: none;
+    float: left;
+    width: 50%;
+    height: auto;
+}
+
+tr:hover img {
+    display: inline;
+}
+
+div.right-flex-content img {
+    height: 500px;
+    width: 500px;
+}
+
+
+
+
+.map-container {
+    display: flex;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-width: 100%;
+    height: 40em;
+}
+
+#map {
+    flex: 1;
+    float: left;
+    height: 100%;
+}
+
+#directionsPanel {
+    flex: 1;
+    float: left;
+    height: 100%;
+    max-width: 15%;
+    overflow: scroll;
+    padding-right: 20px;
+}
+
+#map-input-form {
+    flex: 1;
+    float: right;
+    max-width: 15%;
+    padding-left: 20px; 
+    overflow: hidden;
+}
+
+#find-a-place-container {
+    margin-bottom: 20px; 
+}
+
+#map-input-form h1 {
+    margin-top: 0;
+}
+
+#map-input-form label {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+#map-input-form select,
+#map-input-form input[type="number"],
+#map-input-form input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px; 
+}
+
+/* #map-input-form input[type="radio"] {
+    width: 80%;
+    margin-bottom: 10px;
+} */
+
+#map-input-form button {
+    width: 80%;
+    padding: 10px;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

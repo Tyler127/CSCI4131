@@ -1,0 +1,54 @@
+Grading Criteria
+
+1: 5
+2: 5
+3: 5
+4: 20
+5: 5
+7: 5
+8: 5
+9: 10
+10: 5
+11 - 5
+
+TOTAL: 70/75
+
+DONE - 1. All files should be organized in the directory structure requested above 5 points
+
+DONE - 2. All HTML files and scripts should be updated to make GET requests for images, styling, scripts, etc. A
+            web page with 4 images should make 5 total GET requests (ignoring styling/scripts) to the web server. 5
+            points
+
+DONE - 3. The HTML files can be accessed in the compatible mode. (That is, both
+            http://localhost:4131/MySchedule.html and http://localhost:4131/static/html/MySchedule.html can be
+            processed correctly by the server and returns the MySchedule.html file located in the static/html folder)
+            5 points
+
+DONE - 4. GET requests work correctly if a file exists. 20 points
+            i. Images can be requested and returned correctly (2 points)
+            ii. JavaScript, CSS, and HTML all can be requested and returned correctly (4 points)
+            iii. HTTP status codes and response headers are all correct (2 points)
+            iv. MP3 files are properly returned (2 points)
+            v. No filenames are hard-coded except 404.html and 403.html when processing the get request. In
+            other words, eliminate the long if-else statement shown in the image. (10 points)
+
+DONE - 5. 404 Responses are sent if a requested file doesn’t exist 5 points
+
+6. Permission-related requests are handled properly with a 403 response if the file isn’t properly accessible
+5 points
+
+DONE - 7. A redirect request properly routes the user to YouTube 5 points
+
+DONE - 8. Redirect also works for Google search. 5 points
+
+DONE - 9. Log the responses to a local file 10 points
+
+DONE - 10. Calculator works properly. 5 points
+
+DONE - 11. Key NON-GOOGLE MAPS related Functionality from previous assignments works properly
+(Remember to include your MySchedule.html and MyForm.html in the submission)
+YOU WILL HAVE TO OBTAIN YOUR OWN KEY FOR GOOGLE MAPS IF YOU WANT THAT
+FUNCTIONALITY TO REMAIN OPERATIVE – IT IS NOT REQUIRED FOR THIS
+ASSIGNMENT. 5 points
+
+12. (Bonus) File explorer works properly, 10 points
