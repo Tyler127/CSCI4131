@@ -1,4 +1,6 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
+import os
+from stat import S_IROTH
 from urllib.parse import unquote_plus
 import datetime
 
@@ -136,8 +138,17 @@ def handle_req(url, body=None):
     # Parse any form parameters submitted via POST
     parameters = get_body_params(body)
 
-    # Attempt to open the file and if there is an error return the 404 or 403 page
+    # Attempt to open the file and if there is an error return the 404 page
     try:
+        file_path = "static/" + file_directory[filetype] + "/" + filename
+
+        # If others do not have read permissions return the 403 page
+        # Found this from Python documentation: https://docs.python.org/3/library/stat.html
+        # Additional help from https://tutorialspoint.com/How-to-check-the-permissions-of-a-file-using-Python
+        if not (file_directory[filetype] == "img"):
+            if not bool(os.stat(file_path).st_mode & S_IROTH):
+                return open("static/html/403.html").read(), "text/html; charset=utf-8"  
+
         if filename == "EventLog.html":
             return (
                 """
@@ -190,16 +201,13 @@ def handle_req(url, body=None):
                 "text/html; charset=utf-8",)
     
         elif is_br_type[filetype]:
-            return open("static/" + file_directory[filetype] + "/" + filename, "br").read(), type_mime_strings[filetype]
+            return open(file_path, "br").read(), type_mime_strings[filetype]
 
         elif not is_br_type[filetype]:
-            return open("static/" + file_directory[filetype] + "/" + filename).read(), type_mime_strings[filetype]
+            return open(file_path).read(), type_mime_strings[filetype]
 
     except FileNotFoundError:
         return open("static/html/404.html").read(), "text/html; charset=utf-8"
-    
-    except PermissionError:
-        return open("static/html/403.html").read(), "text/html; charset=utf-8"
 
 
 class RequestHandler(BaseHTTPRequestHandler):
