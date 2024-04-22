@@ -1,0 +1,29 @@
+{
+  "monday": [
+    {
+      "name": "Csci 4131 Lecture",
+      "start": "09:45",
+      "end": "11:00",
+      "phone": "See Class information on Canvas",
+      "location": "5 Blegen Hall",
+      "info": "CSci 4131 Info",
+      "url": "https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790654"
+    }
+  ],
+  "tuesday": [],
+  "wednesday": [
+    {
+      "name": "CSci 4131 Lecture",
+      "start": "09:45",
+      "end": "11:00",
+      "phone": "See Class information on Canvas",
+      "location": "5 Blegen Hall",
+      "info": "CSci 4131 Info",
+      "url": "https://onestop2.umn.edu/pcas/viewCatalogCourse.do?courseId=790654"
+    }
+  ],
+  "thursday": [],
+  "friday": [],
+  "saturday": [],
+  "sunday": []
+}
