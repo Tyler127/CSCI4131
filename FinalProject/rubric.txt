@@ -1,0 +1,37 @@
+ 5	1. Submission instructions are met. SPECIFICALLY - remember to remove the 
+		node_modules folder (5 points, really 5 points!) 
+
+10     	 2. The “Schedule” and "Add Event” pages of your website redirect the user to the "Login" 
+		=page automatically before authentication. (10 points) 
+
+5	3. The "Login" page shows the form elements and the submit button. (5 points) 
+
+10	4. Use Fetch login to send user credentials to the server, and redirect the user to the 
+		“Schedule” page after successful login validation by the server. (10 points) 
+
+5	5. If server login validation fails, an error message is displayed on the "Login" page and the 
+	browser displays the login page and error message.  (check the additional screenshots)(5 
+	points) 
+
+5	6. After successful login, the "Schedule" page displays correctly. (5 points) 
+
+	7. The "Schedule" page gets the list of events from the server with Fetch (which the server 
+		gets from the database). These events are dynamically added to the table displayed in the 
+		user’s browser. (10 points) 
+
+5	8. The events shown on the “Schedule” page are correctly sorted. (5 points) 
+
+10	9. The user can add a new event to the database using the form present in the "Add Event" 
+		page. (10 points) – changed: you can use fetch or a post request to an endpoint!!! 
+
+5	10. The “Schedule” and “Add Event” pages display and have an operational navigation bar. 
+		(5 points) 
+
+5	11. When a new event is added through the “Add Event” page, the event data is stored in the 
+		MySQL database. Then the user is redirected to the "Schedule" page. (5 points) 
+
+10	12. All html is code is written in a pug template and not native html (10 points) 
+
+5	13. The logout functionality works correctly. (5 points) 
+
+10	14. Use express to handle all http requests (10 points)
