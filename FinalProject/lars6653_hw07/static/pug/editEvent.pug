@@ -1,0 +1,83 @@
+doctype html
+
+head
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO' crossorigin='anonymous')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js' integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49' crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js' integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy' crossorigin='anonymous')
+  title Edit Event
+
+nav.navbar.navbar-expanded.navbar-light.bg-light
+  ul.nav.nav-pills
+    li.nav-item
+      a.nav-link(href='/index') Home
+    li.nav-item
+      a.nav-link(href='/schedule') Schedule
+    li.nav-item
+      a.nav-link(href='/addEvent')
+        | Add
+        | Event
+    li.nav-item
+      form#logout(name='logout' method='post' action='/logout')
+        button Logout
+
+br
+br
+
+.container.mb-5
+  form#addEvent(name='addEvent' method='post' action='/updateEvent')
+    
+    .form-group
+      label(for='nameInput') Event
+      input#nameInput.form-control(type='text' name='event' pattern='[a-zA-Z0-9\s]+' title='Event must be alphanumeric' required='' value= event)
+      small#eventHelp.form-text.text-muted
+        | Event name must be alphanumeric
+    
+    .form-group
+      label(for='dayInput') Day of Week
+      select#dayInput.form-control(name='day' value= day)
+        option
+          | Sunday
+        option
+          | Monday
+        option
+          | Tuesday
+        option
+          | Wednesday
+        option
+          | Thursday
+        option
+          | Friday
+        option
+          | Saturday
+
+    .form-group
+      label(for='startTimeInput') Start
+      input#startTimeInput.form-control(type='time' name='start' required='' value= start)
+    
+    .form-group
+      label(for='endTimeInput') End
+      input#endTimeInput.form-control(type='time' name='end' required='' value= end)
+    
+    .form-group
+      label(for='phoneInput') Phone
+      input#phoneInput.form-control(type='text' name='phone' required='' value= phone)
+    
+    .form-group
+      label(for='locationInput') Location
+      input#locationInput.form-control(type='text' name='location' required='' value= location)
+    
+    .form-group
+      label(for='extraInput') Extra Info
+      input#extraInput.form-control(type='text' name='info' required='' value= info)
+    
+    .form-group
+      label(for='urlInput') Enter URL for the Extra Info
+      input#urlInput.form-control(type='url' name='url' required='' value= url)
+    
+    .form-group
+      input#urlInput.form-control.d-none(type='id' name='id' value= id)
+    
+    button.btn.btn-block.btn-primary(type='submit') Save Changes
